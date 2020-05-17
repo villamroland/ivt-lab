@@ -10,11 +10,13 @@ public class GT4500Test {
 
   private GT4500 ship;
 
+
   @BeforeEach
   public void init(){
     TorpedoStore mockP=mock(TorpedoStore.class);
     TorpedoStore mockS=mock(TorpedoStore.class);
-
+    mockP.setTorpedo(10);
+    mockS.setTorpedo(10);
     this.ship = new GT4500(mockP, mockS);
 
   }
